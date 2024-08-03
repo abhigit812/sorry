@@ -1,0 +1,98 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fce4ec; /* Light pink background */
+    font-family: 'Roboto', sans-serif;
+    font-style: italic; /* Apply italic style */
+}
+
+.container {
+    text-align: center;
+    background-color: #ffffff; /* White background for container */
+    padding: 30px; /* Increased padding */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.message {
+    font-size: 30px; /* Increased font size */
+    color: #d81b60; /* Romantic pink text color */
+    opacity: 0;
+    animation: fadeIn 5s forwards, bounce 2s 5s infinite;
+    margin: 30px 0; /* Increased margin */
+}
+
+.button {
+    background-color: #d81b60; /* Romantic pink background */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 5px;
+    padding: 15px 25px; /* Increased padding */
+    font-size: 18px; /* Increased font size */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #c2185b; /* Darker pink on hover */
+}
+
+.poll {
+    margin-top: 30px; /* Increased margin */
+    font-size: 22px; /* Increased font size */
+    color: #d81b60; /* Romantic pink text color */
+    padding: 20px; /* Increased padding */
+    border: 2px solid #d81b60; /* Pink border */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #ffffff; /* White background for poll */
+}
+
+.poll p {
+    margin-bottom: 20px; /* Increased margin for spacing between question and buttons */
+}
+
+.full-image {
+    width: auto;
+    height: 500px; /* Increased height */
+    display: none;
+    margin-top: 30px; /* Increased margin */
+}
+
+/* Adding animation for fade-in effect */
+@keyframes fadeInPoll {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeInPoll 1s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
